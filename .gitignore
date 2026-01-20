@@ -1,0 +1,14 @@
+*.pyc
+*.log
+.vscode
+*.pkl
+*.out
+*.pt
+*.dex
+*.pdf
+VGAEMalGAN
+Datasets
+src/Output
+src/APKs/*
+src/feature/LibRadar/Data/Decompiled/*
+src/feature/LibRadar/Data/lite_dataset_10.csv
