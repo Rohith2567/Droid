@@ -48,9 +48,17 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     input_dir = args.input
-    apk_base = os.path.abspath(os.path.join(input_dir,'../'))
-    db_name = input_dir.split(apk_base)[-1].strip('/')
+    # apk_base = os.path.abspath(os.path.join(input_dir,'../'))
+    # db_name = input_dir.split(apk_base)[-1].strip('/')
     
+    # output_dir = args.output
+    if input_dir is not None:
+        apk_base = os.path.abspath(os.path.join(input_dir, '../'))
+        db_name = os.path.basename(os.path.normpath(input_dir))
+    else:
+        apk_base = None
+        db_name = None
+
     output_dir = args.output
     makedirs(output_dir)
     label = args.label
